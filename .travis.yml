@@ -3,9 +3,10 @@ jdk:
   - openjdk8
 addons:
   sonarcloud:
-    organization: "unimibsoftengcourse2021" # the key of the org you chose at step #3
+    organization: "unimibsoftengcourse2021"
     token:
-      secure: $SONAR_TOKEN # encrypted value of your token
+      secure: "e7649fac520ca2843fa187b2a42617a97f753a8c" # encrypted value of your token
+
 script:
   # the following command line builds the project, runs the tests with coverage and then execute the SonarCloud analysis
   - mvn clean org.jacoco:jacoco-maven-plugin:prepare-agent install sonar:sonar -Dsonar.projectKey=UnimibSoftEngCourse2021_travis-exercise-lerpof
